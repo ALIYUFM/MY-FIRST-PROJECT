@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Highlight Notes</title>
+  <style>
+    .note {
+      padding: 10px;
+      margin: 5px;
+      border: 1px solid #ccc;
+    }
+  </style>
+</head>
+<body>
+
+  <p class="note"> NOTE 1 </p>
+  <p class="note"> NOTE 2 </p>
+  <p class="note"> NOTE 3 </p>
+  <p class="note"> NOTE 4 </p>
+
+  <button onclick="highlightNotes()">Highlight</button>
+
+  <script>
+    function highlightNotes() {
+      const notes = document.getElementsByClassName("note");
+      for (let i = 0; i < notes.length; i += 2) {
+        notes[i].style.backgroundColor = "yellow";
+      }
+    }
+  </script>
+
+</body>
+</html>
